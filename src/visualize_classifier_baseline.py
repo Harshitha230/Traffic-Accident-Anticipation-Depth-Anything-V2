@@ -47,26 +47,28 @@ def plot_confusion(predictions_df: pd.DataFrame, output_path: Path) -> None:
 
 
 def main() -> None:
+    from config import get_config
+    config = get_config()
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--predictions-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/outputs/predictions/depth_video_logreg_200_val_predictions.csv",
+        default=str(config.outputs_dir / "predictions" / "depth_video_logreg_200_val_predictions.csv"),
     )
     parser.add_argument(
         "--classifier-metrics-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/outputs/metrics/depth_video_logreg_200_results.json",
+        default=str(config.outputs_dir / "metrics" / "depth_video_logreg_200_results.json"),
     )
     parser.add_argument(
         "--risk-history-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/ablation experiments/outputs/metrics/baseline_history.json",
+        default=str(config.project_root / "ablation experiments" / "outputs" / "metrics" / "baseline_history.json"),
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/outputs/plots/classifier_baseline",
+        default=str(config.outputs_dir / "plots" / "classifier_baseline"),
     )
     args = parser.parse_args()
 

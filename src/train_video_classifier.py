@@ -54,21 +54,20 @@ def evaluate_predictions(y_true: np.ndarray, probabilities: np.ndarray) -> dict[
 
 
 def main() -> None:
+    config = get_config()
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--train-csv",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/data/splits/balanced_train_subset_200_classifier_train.csv",
+        default=str(config.splits_dir / "balanced_train_subset_200_classifier_train.csv"),
     )
     parser.add_argument(
         "--val-csv",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/data/splits/balanced_train_subset_200_classifier_val.csv",
+        default=str(config.splits_dir / "balanced_train_subset_200_classifier_val.csv"),
     )
     parser.add_argument("--output-prefix", type=str, default="depth_video_logreg_200")
     args = parser.parse_args()
-
-    config = get_config()
     train_csv_path = Path(args.train_csv)
     val_csv_path = Path(args.val_csv)
 

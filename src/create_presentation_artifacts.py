@@ -110,31 +110,33 @@ def save_dataset_example_pair(sample_id: str, label_name: str, frame_metadata: p
 
 
 def main() -> None:
+    from config import get_config
+    config = get_config()
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--predictions-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/outputs/predictions/depth_video_logreg_200_val_predictions.csv",
+        default=str(config.outputs_dir / "predictions" / "depth_video_logreg_200_val_predictions.csv"),
     )
     parser.add_argument(
         "--summary-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/outputs/plots/classifier_baseline/classifier_result_summary.json",
+        default=str(config.outputs_dir / "plots" / "classifier_baseline" / "classifier_result_summary.json"),
     )
     parser.add_argument(
         "--frame-metadata-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/data/processed/frame_metadata.csv",
+        default=str(config.extracted_frames_metadata_path),
     )
     parser.add_argument(
         "--depth-metadata-path",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/data/processed/depth_metadata.csv",
+        default=str(config.depth_metadata_path),
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="/Users/harshithamurali/Deep Learning/Final project/outputs/plots/presentation_artifacts",
+        default=str(config.outputs_dir / "plots" / "presentation_artifacts"),
     )
     args = parser.parse_args()
 

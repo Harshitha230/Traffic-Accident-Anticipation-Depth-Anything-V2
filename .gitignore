@@ -15,6 +15,3 @@ data/processed/depth_features/
 data/processed/frame_metadata.csv
 data/processed/depth_metadata.csv
 data/processed/depth_features_metadata.csv
-
-outputs/
-checkpoints/

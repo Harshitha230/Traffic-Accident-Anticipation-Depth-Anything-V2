@@ -1,0 +1,22 @@
+{
+  "recommended_baseline": {
+    "name": "Depth video-level logistic regression classifier",
+    "validation_auc_roc": 0.81,
+    "validation_accuracy": 0.7,
+    "validation_precision": 0.7222222222222222,
+    "validation_recall": 0.65
+  },
+  "proposal_aligned_risk_model": {
+    "name": "Depth feature LSTM risk-score regressor",
+    "best_validation_loss": 0.11197535544633866,
+    "best_validation_mae": 0.2207045555114746,
+    "best_validation_auc_roc": 0.3225
+  },
+  "artifacts": {
+    "roc_curve": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/classifier_baseline/depth_video_classifier_roc.png",
+    "confusion_matrix": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/classifier_baseline/depth_video_classifier_confusion_matrix.png",
+    "classifier_predictions": "/Users/harshithamurali/Deep Learning/Final project/outputs/predictions/depth_video_logreg_200_val_predictions.csv",
+    "classifier_metrics": "/Users/harshithamurali/Deep Learning/Final project/outputs/metrics/depth_video_logreg_200_results.json",
+    "risk_history": "/Users/harshithamurali/Deep Learning/Final project/ablation experiments/outputs/metrics/baseline_history.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "comparison_table": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/presentation_artifacts/model_comparison_table.csv",
+  "probability_histogram": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/presentation_artifacts/predicted_probability_histogram.png",
+  "precision_recall_curve": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/presentation_artifacts/precision_recall_curve.png",
+  "normal_example": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/presentation_artifacts/negative_000356_dataset_example.png",
+  "crash_example": "/Users/harshithamurali/Deep Learning/Final project/outputs/plots/presentation_artifacts/positive_000881_dataset_example.png",
+  "normal_sample_id": "negative_000356",
+  "crash_sample_id": "positive_000881"
+}

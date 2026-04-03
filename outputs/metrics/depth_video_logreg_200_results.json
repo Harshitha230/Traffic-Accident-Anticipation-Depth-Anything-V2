@@ -1,0 +1,14 @@
+{
+  "train": {
+    "auc_roc": 0.9971875,
+    "accuracy": 0.95625,
+    "precision": 0.9620253164556962,
+    "recall": 0.95
+  },
+  "val": {
+    "auc_roc": 0.81,
+    "accuracy": 0.7,
+    "precision": 0.7222222222222222,
+    "recall": 0.65
+  }
+}

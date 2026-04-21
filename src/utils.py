@@ -17,6 +17,23 @@ def ensure_dir(path: str | Path) -> Path:
     return path
 
 
+def resolve_project_path(path: str | Path, project_root: str | Path) -> Path:
+    candidate = Path(str(path))
+    if candidate.exists():
+        return candidate
+
+    project_root = Path(project_root)
+    raw = str(path)
+    for anchor in ["CarCrashDataset", "data", "outputs", "checkpoints", "src", "scripts"]:
+        token = f"/{anchor}/"
+        if token in raw:
+            suffix = raw.split(token, 1)[1]
+            rewritten = project_root / anchor / suffix
+            return rewritten
+
+    return candidate
+
+
 os.environ.setdefault("MPLCONFIGDIR", str(ensure_dir(Path("/tmp") / "matplotlib-cache")))
 
 import matplotlib

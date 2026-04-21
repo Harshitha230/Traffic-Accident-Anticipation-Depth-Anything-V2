@@ -9,7 +9,7 @@ from tqdm import tqdm
 from transformers import pipeline
 
 from config import get_config
-from utils import ensure_dir
+from utils import ensure_dir, resolve_project_path
 
 
 DEFAULT_MODEL_ID = "depth-anything/Depth-Anything-V2-Small-hf"
@@ -79,7 +79,7 @@ def main() -> None:
 
     for _, row in tqdm(frame_metadata.iterrows(), total=len(frame_metadata), desc="Generating depth maps"):
         sample_id = row["sample_id"]
-        frame_paths = [Path(path) for path in str(row["frame_paths"]).split("|") if path]
+        frame_paths = [resolve_project_path(path, config.project_root) for path in str(row["frame_paths"]).split("|") if path]
         sample_depth_dir = ensure_dir(config.depth_dir / sample_id)
 
         existing_depths = sorted(sample_depth_dir.glob("frame_*.png"))
@@ -106,7 +106,13 @@ def main() -> None:
             }
         )
 
-    pd.DataFrame(depth_rows).to_csv(config.depth_metadata_path, index=False)
+    depth_df = pd.DataFrame(depth_rows)
+    if config.depth_metadata_path.exists():
+        existing_df = pd.read_csv(config.depth_metadata_path)
+        depth_df = pd.concat([existing_df, depth_df], ignore_index=True)
+        depth_df = depth_df.drop_duplicates(subset=["sample_id"], keep="last")
+    depth_df = depth_df.sort_values(["split", "sample_id"]).reset_index(drop=True)
+    depth_df.to_csv(config.depth_metadata_path, index=False)
     print(f"Saved depth metadata to {config.depth_metadata_path}")
 
 

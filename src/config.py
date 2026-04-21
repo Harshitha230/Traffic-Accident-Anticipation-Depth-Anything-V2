@@ -31,6 +31,8 @@ class Config:
     depth_metadata_path: Path = field(init=False)
     depth_features_dir: Path = field(init=False)
     depth_features_metadata_path: Path = field(init=False)
+    rgb_features_dir: Path = field(init=False)
+    rgb_features_metadata_path: Path = field(init=False)
     swift_module_cache_dir: Path = field(init=False)
 
     image_size: tuple[int, int] = (224, 224)
@@ -60,6 +62,7 @@ class Config:
         self.processed_data_dir = self.data_dir / "processed"
         self.depth_dir = self.data_dir / "depth"
         self.depth_features_dir = self.data_dir / "processed" / "depth_features"
+        self.rgb_features_dir = self.data_dir / "processed" / "rgb_features"
         self.splits_dir = self.data_dir / "splits"
         self.frames_dir = self.data_dir / "raw" / "frames"
         self.outputs_dir = self.project_root / "outputs"
@@ -75,6 +78,7 @@ class Config:
         self.extracted_frames_metadata_path = self.processed_data_dir / "frame_metadata.csv"
         self.depth_metadata_path = self.processed_data_dir / "depth_metadata.csv"
         self.depth_features_metadata_path = self.processed_data_dir / "depth_features_metadata.csv"
+        self.rgb_features_metadata_path = self.processed_data_dir / "rgb_features_metadata.csv"
         self.swift_module_cache_dir = self.project_root.parent / ".swift-module-cache"
 
 

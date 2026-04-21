@@ -6,7 +6,7 @@ import pandas as pd
 from tqdm import tqdm
 
 from config import get_config
-from utils import ensure_dir
+from utils import ensure_dir, resolve_project_path
 
 
 def extract_single_video(video_path: Path, output_dir: Path, expected_frames: int) -> None:
@@ -89,7 +89,7 @@ def main() -> None:
     for split_name, split_df in split_dfs:
         for _, row in tqdm(split_df.iterrows(), total=len(split_df), desc=f"Extracting {split_name}"):
             sample_id = row["sample_id"]
-            video_path = Path(row["video_path"])
+            video_path = resolve_project_path(row["video_path"], config.project_root)
             output_dir = config.frames_dir / sample_id
             expected_frames = int(row["sequence_length"])
 
@@ -110,6 +110,11 @@ def main() -> None:
 
     if frames_metadata_rows:
         combined_metadata = pd.concat(frames_metadata_rows, ignore_index=True)
+        if config.extracted_frames_metadata_path.exists():
+            existing_metadata = pd.read_csv(config.extracted_frames_metadata_path)
+            combined_metadata = pd.concat([existing_metadata, combined_metadata], ignore_index=True)
+            combined_metadata = combined_metadata.drop_duplicates(subset=["sample_id"], keep="last")
+        combined_metadata = combined_metadata.sort_values(["split", "sample_id"]).reset_index(drop=True)
         combined_metadata.to_csv(config.extracted_frames_metadata_path, index=False)
         print(f"Saved frame metadata to {config.extracted_frames_metadata_path}")
 

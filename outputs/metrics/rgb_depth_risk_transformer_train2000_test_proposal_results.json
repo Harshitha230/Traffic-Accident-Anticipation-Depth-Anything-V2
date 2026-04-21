@@ -1,0 +1,10 @@
+{
+  "mse": 0.018196292221546173,
+  "mae": 0.03733797371387482,
+  "auc_roc": 0.9987166666666666,
+  "auc_roc_pre_onset": 0.9654444444444445,
+  "tta_threshold_0.50_positive_count": 300,
+  "tta_threshold_0.50_warned_count": 129,
+  "tta_threshold_0.50_warning_recall": 0.43,
+  "tta_threshold_0.50_frames": 5.596899224806202
+}

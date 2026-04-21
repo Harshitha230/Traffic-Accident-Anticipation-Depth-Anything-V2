@@ -1,0 +1,278 @@
+{
+  "pre_onset_min_gap_0": {
+    "all": {
+      "rgb": {
+        "count": 900,
+        "positives": 300,
+        "negatives": 600,
+        "auc_roc_pre_onset": 0.9038555555555556
+      },
+      "rgb_depth": {
+        "count": 900,
+        "positives": 300,
+        "negatives": 600,
+        "auc_roc_pre_onset": 0.9654444444444445
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.06164888888888899
+    },
+    "night": {
+      "rgb": {
+        "count": 36,
+        "positives": 36,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 36,
+        "positives": 36,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "rainy": {
+      "rgb": {
+        "count": 19,
+        "positives": 19,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 19,
+        "positives": 19,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "snowy": {
+      "rgb": {
+        "count": 53,
+        "positives": 53,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 53,
+        "positives": 53,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "ego_yes": {
+      "rgb": {
+        "count": 158,
+        "positives": 158,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 158,
+        "positives": 158,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "known_conditions": {
+      "rgb": {
+        "count": 300,
+        "positives": 300,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 300,
+        "positives": 300,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    }
+  },
+  "pre_onset_min_gap_5": {
+    "all": {
+      "rgb": {
+        "count": 900,
+        "positives": 300,
+        "negatives": 600,
+        "auc_roc_pre_onset": 0.785
+      },
+      "rgb_depth": {
+        "count": 900,
+        "positives": 300,
+        "negatives": 600,
+        "auc_roc_pre_onset": 0.9065444444444444
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.1215444444444444
+    },
+    "night": {
+      "rgb": {
+        "count": 36,
+        "positives": 36,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 36,
+        "positives": 36,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "rainy": {
+      "rgb": {
+        "count": 19,
+        "positives": 19,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 19,
+        "positives": 19,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "snowy": {
+      "rgb": {
+        "count": 53,
+        "positives": 53,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 53,
+        "positives": 53,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "ego_yes": {
+      "rgb": {
+        "count": 158,
+        "positives": 158,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 158,
+        "positives": 158,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "known_conditions": {
+      "rgb": {
+        "count": 300,
+        "positives": 300,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 300,
+        "positives": 300,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    }
+  },
+  "pre_onset_min_gap_10": {
+    "all": {
+      "rgb": {
+        "count": 900,
+        "positives": 300,
+        "negatives": 600,
+        "auc_roc_pre_onset": 0.6487722222222223
+      },
+      "rgb_depth": {
+        "count": 900,
+        "positives": 300,
+        "negatives": 600,
+        "auc_roc_pre_onset": 0.8605555555555557
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.21178333333333335
+    },
+    "night": {
+      "rgb": {
+        "count": 36,
+        "positives": 36,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 36,
+        "positives": 36,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "rainy": {
+      "rgb": {
+        "count": 19,
+        "positives": 19,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 19,
+        "positives": 19,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "snowy": {
+      "rgb": {
+        "count": 53,
+        "positives": 53,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 53,
+        "positives": 53,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "ego_yes": {
+      "rgb": {
+        "count": 158,
+        "positives": 158,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 158,
+        "positives": 158,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    },
+    "known_conditions": {
+      "rgb": {
+        "count": 300,
+        "positives": 300,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "rgb_depth": {
+        "count": 300,
+        "positives": 300,
+        "negatives": 0,
+        "auc_roc_pre_onset": 0.0
+      },
+      "auc_gain_rgb_depth_minus_rgb": 0.0
+    }
+  }
+}

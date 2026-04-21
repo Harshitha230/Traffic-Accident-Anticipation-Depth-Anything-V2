@@ -7,7 +7,7 @@ from PIL import Image
 from tqdm import tqdm
 
 from config import get_config
-from utils import ensure_dir
+from utils import ensure_dir, resolve_project_path
 
 
 def compute_grid_features(depth: np.ndarray, grid_size: int) -> np.ndarray:
@@ -82,7 +82,7 @@ def main() -> None:
     feature_rows = []
     for _, row in tqdm(depth_metadata.iterrows(), total=len(depth_metadata), desc="Extracting depth features"):
         sample_id = row["sample_id"]
-        depth_paths = [Path(path) for path in str(row["depth_paths"]).split("|") if path]
+        depth_paths = [resolve_project_path(path, config.project_root) for path in str(row["depth_paths"]).split("|") if path]
         output_path = config.depth_features_dir / f"{sample_id}.npy"
 
         if not output_path.exists() or args.overwrite:
@@ -102,6 +102,11 @@ def main() -> None:
         )
 
     feature_df = pd.DataFrame(feature_rows)
+    if config.depth_features_metadata_path.exists():
+        existing_df = pd.read_csv(config.depth_features_metadata_path)
+        feature_df = pd.concat([existing_df, feature_df], ignore_index=True)
+        feature_df = feature_df.drop_duplicates(subset=["sample_id"], keep="last")
+    feature_df = feature_df.sort_values(["split", "sample_id"]).reset_index(drop=True)
     feature_df.to_csv(config.depth_features_metadata_path, index=False)
     print(f"Saved depth feature metadata to {config.depth_features_metadata_path}")
     if not feature_df.empty:

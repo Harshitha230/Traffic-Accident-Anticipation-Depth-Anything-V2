@@ -1,0 +1,95 @@
+{
+  "dataset_root": "/Users/harshithamurali/Deep Learning/Final project/CarCrashDataset",
+  "exists": true,
+  "crash_video_count": 1500,
+  "normal_video_count": 3000,
+  "crash_annotation_exists": true,
+  "train_split_exists": true,
+  "test_split_exists": true,
+  "crash_annotations": {
+    "rows": 1500,
+    "malformed_rows": [],
+    "lighting_counts": {
+      "Day": 1325,
+      "Night": 175
+    },
+    "weather_counts": {
+      "Normal": 1141,
+      "Snowy": 235,
+      "Rainy": 124
+    },
+    "ego_involvement_counts": {
+      "Yes": 801,
+      "No": 699
+    },
+    "accident_frames": {
+      "min": 1,
+      "max": 20,
+      "avg": 12.81
+    }
+  },
+  "train_split": {
+    "rows": 3600,
+    "class_counts": {
+      "0": 2400,
+      "1": 1200
+    },
+    "missing_feature_entries": [
+      "negative/001355.npz",
+      "negative/002192.npz",
+      "negative/002082.npz",
+      "negative/000754.npz",
+      "negative/000847.npz",
+      "positive/000197.npz",
+      "negative/001188.npz",
+      "negative/001934.npz",
+      "negative/001592.npz",
+      "negative/002229.npz",
+      "negative/000729.npz",
+      "negative/000955.npz",
+      "negative/002359.npz",
+      "negative/001201.npz",
+      "negative/000540.npz",
+      "positive/000524.npz",
+      "positive/000816.npz",
+      "negative/001342.npz",
+      "positive/000460.npz",
+      "negative/002542.npz"
+    ],
+    "missing_feature_count": 3482,
+    "missing_video_entries": [],
+    "missing_video_count": 0
+  },
+  "test_split": {
+    "rows": 900,
+    "class_counts": {
+      "1": 300,
+      "0": 600
+    },
+    "missing_feature_entries": [
+      "positive/000353.npz",
+      "positive/000849.npz",
+      "negative/001320.npz",
+      "negative/000210.npz",
+      "negative/002373.npz",
+      "positive/000494.npz",
+      "negative/001636.npz",
+      "negative/002981.npz",
+      "negative/000430.npz",
+      "positive/000796.npz",
+      "negative/000313.npz",
+      "negative/001451.npz",
+      "negative/002958.npz",
+      "negative/000539.npz",
+      "negative/002254.npz",
+      "positive/000709.npz",
+      "negative/000218.npz",
+      "positive/000152.npz",
+      "positive/000311.npz",
+      "negative/000998.npz"
+    ],
+    "missing_feature_count": 867,
+    "missing_video_entries": [],
+    "missing_video_count": 0
+  }
+}
